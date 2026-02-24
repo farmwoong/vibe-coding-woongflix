@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>현재 상영중 | Vibe Cinema</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">Vibe Cinema</h1>
+      <nav class="nav">
+        <a href="#" class="nav-link active">현재 상영중</a>
+        <a href="#" class="nav-link">인기</a>
+        <a href="#" class="nav-link">내가 본 작품</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h2 class="section-title">현재 상영중</h2>
+      <p class="section-desc">지금 극장에서 만나보세요</p>
+    </section>
+
+    <section class="movie-row">
+      <div class="row-header">
+        <h3 class="row-title">Now Playing</h3>
+      </div>
+      <div class="movie-list" id="movieList">
+        <!-- 영화 카드가 JS로 채워짐 -->
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-poster"></div>
+          <div class="skeleton-title"></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-poster"></div>
+          <div class="skeleton-title"></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-poster"></div>
+          <div class="skeleton-title"></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-poster"></div>
+          <div class="skeleton-title"></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-poster"></div>
+          <div class="skeleton-title"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="modalClose" aria-label="닫기">&times;</button>
+      <div class="modal-poster-wrap">
+        <img class="modal-poster" id="modalPoster" src="" alt="">
+      </div>
+      <div class="modal-info">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-overview" id="modalOverview"></p>
+        <p class="modal-meta" id="modalMeta"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
